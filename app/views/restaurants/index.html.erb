@@ -1,0 +1,11 @@
+<h1>Welcome ! </h1>
+<h2>See your restaurants : </h2>
+
+<ul><%@restaurant.each do |resto| %>
+ <li>
+    <h3><%= resto.name %></h3>
+   <p><%= resto.category %></p>
+ <%= link_to "View", restaurants_path(@restaurant) %>
+ </li>
+  <% end %>
+</ul>
